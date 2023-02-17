@@ -23,9 +23,9 @@
     <div class="title">
       <!-- EDIT HERE -->
       <h3 class="STARDUST1">2023</h3>
-      <h1 class="STARDUST2">NL &amp; YL</h1>
-      <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
-      <img class="img" src="a.jpeg" alt="JUNO_OKYO" />
+      <h1 class="STARDUST2">Nhật Linh &amp; Yến Linh</h1>
+      <h3 class="STARDUST3"><strong>❤ &#x2764; &#x2764;</strong> LOVE  YOU SO MUCH <strong>❤ &#x2764; &#x2764;</strong></h3>
+      <img class="img" id="my-image"  src="img/1.jpg" alt="love" />
       <canvas id="pinkboard"></canvas>
     </div>
 
@@ -33,5 +33,19 @@
     <script src="js/main.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/universe.js"></script>
+	<script>
+		const myImage = document.querySelector('#my-image');
+		const imageArray = ['img/3.jpg','img/5.jpg','img/6.jpg', 'img/7.jpg','img/8.jpg', 'img/10.jpg','img/1.jpg'];
+		let currentImageIndex = 0;
+
+		setInterval(() => {
+		currentImageIndex++;
+		if (currentImageIndex === imageArray.length) {
+			currentImageIndex = 0;
+		}
+		myImage.src = imageArray[currentImageIndex];
+	}, 5000);
+
+	</script>
   </body>
 </html>
